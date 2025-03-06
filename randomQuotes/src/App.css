@@ -1,20 +1,26 @@
+/* Add to your App.css file */
+
 .container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
-  font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0 20px;
 }
 
 .card {
-  max-width: 500px;
-  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
   border-radius: 16px;
   background-color: white;
   box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.1),
-    0 6px 10px rgba(0, 0, 0, 0.05);
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 6px 10px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -26,28 +32,28 @@
 }
 
 .quote {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
   color: #2c3e50;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-style: italic;
   position: relative;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 .quote::before {
   content: '"';
   position: absolute;
-  left: -20px;
-  top: 0;
+  left: -15px;
+  top: -10px;
   color: #3498db;
-  font-size: 2.5rem;
+  font-size: 3rem;
   opacity: 0.7;
 }
 
 .auther {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #7f8c8d;
   text-align: right;
   font-weight: 500;
@@ -59,15 +65,41 @@
   color: #3498db;
 }
 
-button {
-  padding: .5rem;
-  border-radius: 20px;
-  border: none;
-  background-color:  #cbd2d5;
-  font-size: 1rem;
-  cursor: pointer;
+.button-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-button:hover{
-  transform: translateY(-5px);
+button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-quote-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.tweet-btn {
+  background-color: #2b2d2f;
+  color: rgb(255, 254, 254);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
 }

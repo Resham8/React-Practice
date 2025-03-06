@@ -19,14 +19,30 @@ function App() {
       });
   }
 
+  const tweetQuote = () => {
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      `"${quoteData.quote}" — ${quoteData.author}`
+    )}`;
+    window.open(tweetUrl, "_blank");
+
+    // console.log(tweetUrl);
+  };
+
   return (
     <>
       <div className="container">
         <div className="card">
           <p className="quote">{loading ? "Loading..." : quoteData.quote}</p>
-          <p className="auther">{loading ? "Loading..." : quoteData.author}</p>        
+          <p className="auther">{loading ? "Loading..." : quoteData.author}</p>
         </div>
-        <button onClick={fetchQuote}>Get Quote</button>
+        <div className="button-container">
+          <button className="get-quote-btn" onClick={fetchQuote}>
+            Get New Quote
+          </button>
+          <button className="tweet-btn" onClick={tweetQuote}>
+            Tweet This Quote
+          </button>
+        </div>
       </div>
     </>
   );
