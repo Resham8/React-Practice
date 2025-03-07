@@ -12,8 +12,8 @@
 }
 
 .card {
-  max-width: 600px;
-  width: 100%;
+  max-width: 500px;
+  width: 90%;
   padding: 2.5rem;
   margin-bottom: 2rem;
   border-radius: 16px;
@@ -102,4 +102,20 @@ button:hover {
 
 button:active {
   transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .quote {
+    font-size: 1.3rem;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
 }
