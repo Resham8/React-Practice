@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -40,7 +40,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
-  background: linear-gradient(90deg, #e0fbfc, #98c1d9, #3d5a80);
+  background: linear-gradient(90deg, #e0fbfc, #98c1d9, #689adb);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
