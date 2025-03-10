@@ -8,26 +8,29 @@ function App() {
   const [correctAns, setCorrectAns] = useState(null);
 
   useEffect(() => {
+    refreshGame()
+  }, [])
+
+  function refreshGame(){
     const newCorrectAns = generateRandomRGB();
     setCorrectAns(newCorrectAns);
 
     const randomOptions = [generateRandomRGB(),generateRandomRGB(),generateRandomRGB()];
     randomOptions.push(newCorrectAns);
     setOptions(randomOptions.sort(() => Math.random() - 0.5))
-  }, [])
-
+  }
 
   return (
     <>
       <div className="container">
-        <ColorCard randomRGB={correctAns} options={options} message={"try a guess"}></ColorCard>
+        <ColorCard randomRGB={correctAns} options={options} correctAns={correctAns} refreshGame={refreshGame} ></ColorCard>
       </div>
-    </>
+    </> 
   );
 }
 
 function generateRandomNo(){
-  return 1 + Math.floor(Math.random() * (255 - 1));
+  return Math.floor(Math.random() * 256);
 }
 
 function generateRandomRGB(){

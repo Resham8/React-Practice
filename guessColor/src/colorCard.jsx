@@ -1,12 +1,25 @@
 import React, { useEffect, useState } from "react";
 
 
-const ColorCard = ({randomRGB, options, message}) => {
+const ColorCard = ({randomRGB, options, correctAns, refreshGame}) => {
   const [guessColor, setguessColor] = useState(null);
+  const [message, setMessage] = useState(null);
 
   useEffect(()=>{
     setguessColor(randomRGB)
   }, [randomRGB])
+
+  function winDecide(color){
+    if(color == correctAns){
+      setMessage("🎉 Yay correct ans! 🥳")
+      setTimeout(() => {
+        setMessage(""); 
+        refreshGame();
+      }, 1000);
+    } else {
+      setMessage("Try another guess 🤨")
+    }
+  }
 
   return (
     <>
@@ -19,12 +32,14 @@ const ColorCard = ({randomRGB, options, message}) => {
           key={index}
           className="option-btn"
           style={{ backgroundColor: `${color}` }}
-          onClick={() => console.log('World')}
-        >{index} {color}</button>))}      
+          onClick={() => winDecide(color)}
+        ></button>))}      
       </div>
       <p className="message">{message}</p>
     </>
   );
 };
+
+
 
 export default ColorCard;
