@@ -37,7 +37,7 @@ body {
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
+  text-transform: uppercase;  
   letter-spacing: 2px;
   font-weight: 700;
   background: linear-gradient(90deg, #e0fbfc, #98c1d9, #689adb);
@@ -81,10 +81,37 @@ h1 {
   transform: scale(0.9);
 }
 
+span{
+  padding: .5rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  float: right;
+}
+
+
 .message {
   font-size: 1.1rem;
   font-weight: 600;
   margin-top: 1rem;
+}
+
+.btn-new-game {
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  background: rgba(214, 224, 255, 0.25);
+  color: white;
+  margin-top: 2rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.btn-new-game:hover {
+  transform: scale(1.1);
+}
+
+.btn-new-game:active {
+  transform: scale(1);
 }
 
 @media (max-width: 480px) {
