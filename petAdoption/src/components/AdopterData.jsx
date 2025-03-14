@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 
 export class AdopterData extends Component {
   render() {
+    const { formData, handleGoBack } = this.props;
     return (
-      <div>AdopterData</div>
+      <div></div>
     )
   }
 }

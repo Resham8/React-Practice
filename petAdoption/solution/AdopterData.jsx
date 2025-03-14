@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class AdopterData extends Component {
     render() {
-        const { formData, handleGoBack } = this.props;
+            
         return (
             <div>
                 <table styele={{
