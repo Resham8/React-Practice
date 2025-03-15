@@ -67,9 +67,9 @@ const PetAdoptionForm = () => {
             return;
         }
 
-        const data = { petName, petType, breed, adopterName, email, phone };
-        setFormData((prevData) => [...prevData, data]);
-        setShowTable(true);
+            const data = { petName, petType, breed, adopterName, email, phone };
+            setFormData((prevData) => [...prevData, data]);
+            setShowTable(true);
         setValues({
             petName: "",
             petType: "Dog",

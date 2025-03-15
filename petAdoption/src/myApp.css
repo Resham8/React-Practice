@@ -72,7 +72,7 @@ button {
   width: 100%;
   color: #fff;
   border: none;
-  border-radius: 2px;
+  border-radius: 15px;
   font-size: 16px;
   font-family: inherit;
   cursor: pointer;
@@ -80,23 +80,48 @@ button {
 }
 
 table {
-  border: 1px solid #335624;
   margin: 20px auto;
   width: 65%;
-  background-color: #fff;
-  border-collapse: collapse;
-  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
 }
 
-tr,
-td,
+th, td {
+  padding: 14px 16px;
+  font-size: 16px;
+  text-align: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
 th {
-  border: 1px solid #335624;
-  padding: 10px;
+  background: linear-gradient(135deg, #335624, #4b7d3e);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-tr {
-  background-color: #c59771bd;
+tr:nth-child(even) {
+  background: rgba(197, 151, 113, 0.25);
+}
+
+tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+tr:hover {
+  background: rgba(51, 86, 36, 0.3);
+  transition: background 0.3s ease-in-out;
 }
 
 small {
