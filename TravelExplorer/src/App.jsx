@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
 import "./App.css";
 import Destinations from "./components/Destinations";
 import Layout from "./components/Layout";
+import DestinationsDetails from "./components/DestinationsDetails";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/destinations" element={<Destinations />} />
-          <Route path="/destinations:id" element={<DestinationsDetails />} />
+          <Route path="/destinations/:id" element={<DestinationsDetails/>} />
           <Route path="/about" element={<About />} />
         </Route>
       </Routes>
@@ -26,10 +27,6 @@ function Home() {
       <Link to="/destinations">Explore Destinations</Link>
     </div>
   );
-}
-
-function DestinationsDetails() {
-  return <div>selected destinations</div>;
 }
 
 function About() {
