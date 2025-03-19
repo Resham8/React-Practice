@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;  
+}
+
 .layout-container {
   height: 100vh;
   display: flex;
@@ -9,11 +15,12 @@
 }
 
 .main {
-  flex: 1;
-  overflow: auto;
-  padding: 20px;
-  box-sizing: border-box;
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
+
+
 
 footer {
   background-color: #333;
