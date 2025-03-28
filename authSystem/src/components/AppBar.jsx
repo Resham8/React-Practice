@@ -1,13 +1,18 @@
 import React from "react";
 
-const AppBar = () => {
+const AppBar = ({ username, isLoggedIn, logout }) => {
   return (
     <div className="appbar">
       <h2>Auth System Demo</h2>
-      <div className="appbar-componetnt">
-        <p>Username</p>
-        <button className="btn">Logout</button>
-      </div>
+
+      {isLoggedIn && (
+        <div className="appbar-componetnt">
+          <p>Welcome, {username}</p>
+          <button className="btn" onClick={logout}>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };

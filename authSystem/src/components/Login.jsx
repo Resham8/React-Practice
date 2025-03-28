@@ -1,6 +1,8 @@
 import React from 'react'
+import { useState } from 'react';
 
-const Login = () => {
+const Login = ({ username, handleChange, login }) => {
+  
   return (
     <div className="container">
       <div className="card">
@@ -10,21 +12,14 @@ const Login = () => {
           <label htmlFor="username">Username</label>
           <input
             type="text"
-            id="username"
-            placeholder="Enter username"
+            name="username"
+            value={username} 
+            onChange={(e) => handleChange(e.target.value)}          
           />
         </div>
+        
 
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter password"
-          />
-        </div>
-
-        <button className="btn">Login</button>
+        <button className="btn" onClick={login}>Login</button>
        
       </div>
     </div>

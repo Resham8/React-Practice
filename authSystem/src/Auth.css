@@ -1,15 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 30px;
 }
 
 .card {
@@ -63,17 +63,16 @@ input {
   background: #0056b3;
 }
 
-.appbar{
+.appbar {
   height: 20%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   background: #00b7ff;
   padding: 1rem;
 }
 
-.appbar-componetnt{
+.appbar-componetnt {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-
