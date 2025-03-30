@@ -7,7 +7,8 @@ import AuthSystemContext from "../context/authSystemContext";
 const AuthSystem = () => {
   const [username, setUsername] = useState("");
   const [isLoggedIn, setIsloggedIn] = useState(false);
-
+  const [isContextApi, setIsContextApi] = useState(false);
+  // console.log(isContextApi)
   
   function login() {
     if (username.trim()) {
@@ -20,6 +21,10 @@ const AuthSystem = () => {
   function logout() {
     setUsername("");
     setIsloggedIn(false);
+  }
+
+  function handleContextChange(){
+    setIsContextApi(!isContextApi)
   }
 
   return (
@@ -45,8 +50,10 @@ const AuthSystem = () => {
             whiteSpace: "nowrap",
           }}
         >
-          <label htmlFor="useContext">Use context API</label>
-          <input type="checkbox" id="useContext" />
+          <label htmlFor="use-context">
+              Use Context API: {useContextApi ? 'On' : 'Off'}
+            </label>
+          <input type="checkbox" id="use-context" checked={isContextApi} onChange={handleContextChange} />
         </div>
       </div>
 
