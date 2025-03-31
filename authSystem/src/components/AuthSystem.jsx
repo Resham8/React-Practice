@@ -51,7 +51,7 @@ const AuthSystem = () => {
           }}
         >
           <label htmlFor="use-context">
-              Use Context API: {useContextApi ? 'On' : 'Off'}
+              Use Context API: {isContextApi ? 'On' : 'Off'}
             </label>
           <input type="checkbox" id="use-context" checked={isContextApi} onChange={handleContextChange} />
         </div>
