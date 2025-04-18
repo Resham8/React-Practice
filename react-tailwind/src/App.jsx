@@ -6,13 +6,14 @@ import Screen2 from "./components/Screen2";
 import Otp from "./components/Otp";
 
 function App() {
+  
   return (
     // <Screen2 heading={"Let's Get Sarted"}>
     //   <Input type="text" placeholder={"Email Id"}/>
     // </Screen2>
 
     <Screen2 heading={"Check Your Email For A Code"} subheading={"Please enter the verification code sent to your email Id prabhleen@gmail.com"}>
-      <Otp/>
+      <Otp number={6}/>
     </Screen2>
   );
 }

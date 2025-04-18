@@ -14,11 +14,11 @@ function Screen2({heading,subheading, children}) {
         </h1>
         {subheading && <p className="text-sm text-gray-300">{subheading}</p>}
 
-        <div className="flex flex-col gap-5">
+        
             {children}
 
-          <Button disabled={false}>Continue</Button>
-        </div>
+          {/* <Button disabled={false}>Continue</Button> */}
+        
       </div>
     </div>
   );
