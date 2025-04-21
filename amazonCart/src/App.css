@@ -23,7 +23,12 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.header-container h1 {
+.logo {
+  text-decoration: none;
+  color: white;
+}
+
+.logo h1 {
   font-size: 1.8rem;
   font-weight: bold;
 }
@@ -54,3 +59,25 @@ body {
   font-size: 0.7rem;
   font-weight: bold;
 }
+
+.sidebar {
+  width: 256px;
+  border-right: 1px solid #e5e5e5;
+  padding: 1rem;
+}
+
+.sidebar-items {
+  background-color: #f3f4f6;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.sidebar-items h2 {
+  font-weight: bold;
+}
+
+.sidebar-items p {
+  font-size: 14px;
+  color: #6b7280;
+}
+

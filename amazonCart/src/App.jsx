@@ -1,13 +1,21 @@
-import './App.css'
-import Navbar from './components/Navbar'
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import WishList from "./components/WishList";
+import AmazonCart from "./components/AmazonCart";
 
-function App() {  
-
+function App() {
   return (
-    <div>
-      <Navbar/>
-    </div>
-  )
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<WishList />} />
+          <Route path="/cart" element={<AmazonCart />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
