@@ -4,7 +4,6 @@ import SideBar from "./SideBar";
 import { useState } from "react";
 import ProductModal from "./ProductModal";
 import { cartItemsState } from "../store/cartItemState";
-import { Link } from "react-router-dom";
 
 function WishList() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,18 +52,24 @@ function WishList() {
               <img src={product.img} alt="" className="product-img" />
               <h3 className="product-name">{product.name.substring(0, 21)}</h3>
               <p className="product-price">₹{product.price.toFixed(2)}</p>
-              {addedProducts[product.id] ? (
-                <Link to="/cart" style={{ textDecoration: "none" }}>
-                  <button className="btn-addToCart" >Proceed to Checkout</button>
-                </Link>
-              ) : (
-                <button
-                  className="btn-addToCart"
-                  onClick={() => addToCart(product.id)}
-                >
-                  Add to Cart
-                </button>
-              )}
+              <button
+                className="btn-addToCart"
+                onClick={() => addToCart(product.id, 1)}
+                disabled={!!addedProducts[product.id]}
+              >
+                {addedProducts[product.id] ? (
+                  <span>
+                    <a
+                      href="/cart"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Proceed to Checkout{" "}
+                    </a>
+                  </span>
+                ) : (
+                  "Add to Cart"
+                )}
+              </button>
               <button
                 className="btn-quick-view"
                 onClick={() => handleOpenModal(product)}
