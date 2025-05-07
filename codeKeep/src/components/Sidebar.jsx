@@ -2,7 +2,7 @@ import { Lock, PanelLeftIcon, Star } from "lucide-react";
 import { useState } from "react";
 
 function Sidebar() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   function toggleSidebar() {
     setOpen((prev) => !prev);
@@ -11,7 +11,7 @@ function Sidebar() {
   if (!open) {
     return (
       <aside className="bg-[#333333] h-12 p-3 text-white flex flex-col gap-4 rounded-lg border m-3">
-        <div>
+        <div className="cursor-pointer">
           <PanelLeftIcon color="white" onClick={toggleSidebar} />
         </div>
       </aside>
@@ -23,7 +23,7 @@ function Sidebar() {
         <header>
           <div className="flex justify-between p-1">
             <h2 className="text-xl font-bold">My Lists</h2>
-            <PanelLeftIcon color="white" onClick={toggleSidebar} />
+            <PanelLeftIcon color="white" onClick={toggleSidebar} className="cursor-pointer"/>
           </div>
         </header>
 

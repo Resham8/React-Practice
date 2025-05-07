@@ -1,15 +1,16 @@
-import './App.css'
-import Sidebar from './components/Sidebar'
+import "./App.css";
+import MainContent from "./components/MainContent";
+import Sidebar from "./components/Sidebar";
 
-function App() {  
-
+function App() {
   return (
     <>
-    <div className='flex bg-[#1a1a1a] w-screen h-screen'>
-      <Sidebar/>
-    </div>
+      <div className="flex bg-[#1a1a1a] w-screen h-screen">
+        <Sidebar />
+        <MainContent />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
