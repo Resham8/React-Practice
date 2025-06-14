@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { CheckIcon, ChevronDownIcon, FilterIcon, LockIcon, PlayIcon, RefreshIcon, StarIcon } from "./icons"
 
